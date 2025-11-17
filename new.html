@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="new.js"></script>
+  </head>
+
+  <body>
+    <h1>hello...</h1>
+    <textarea name="textarea" id="input"></textarea>
+    <button id="btn">convert</button>
+
+    <script>
+      // const fav = prompt("what's your favourite number?")
+
+      // const names = {
+      //   firstName: "zeeshan",
+      //   lastName: "abid",
+      //   age: 2025 - 2006,
+      //   job: "fronted devolper",
+      //   learn: "javascript",
+      // };
+
+      // //console.log(names);
+
+      // const interestIn = prompt(
+      //   "what do you want to know about zeeshan? choese between firstName , lastName, age , job, learn"
+      // );
+      // console.log(names[interestIn]);
+
+      // names.location = "lahore";
+      // names["gmail"] = "zeeshanabid@gmail.com";
+      // console.log(names);
+      // use of sets
+      // const orderSet = new Set([
+      //   "pizza",
+      //   "pizza",
+      //   "burger",
+      //   "pasta",
+      //   "pasta",
+      //   "cold drink",
+      // ]);
+      // console.log(orderSet);
+      // // check size
+      // console.log(orderSet.size);
+      // // check value answere bollean
+      // console.log(orderSet.has("pizza"));
+      // console.log(orderSet.has("chicken"));
+      // // add method
+      // orderSet.add("garlic pizza");
+      // orderSet.add("chicken");
+      // console.log(orderSet);
+      // // delete method
+      // orderSet.delete("garlic pizza");
+      // console.log(orderSet);
+      // // all clear method
+      // // orderSet.clear();
+      // //console.log(orderSet);
+      // for (const orders of orderSet) console.log(orders);
+      // //string set
+      // const name = new Set("zeeshan abid");
+      // console.log(name);
+      // // check size
+      // console.log(name.size);
+
+      // // array convert in set
+      // const staff = [
+      //   "waiter",
+      //   "manager",
+      //   "manager",
+      //   "waiter",
+      //   "chef",
+      //   "cook",
+      //   "cook",
+      // ];
+
+      // console.log(staff);
+      // // convert array in set
+      // const uniqueStaff = [...new Set(staff)];
+      // console.log(uniqueStaff);
+
+      // // use of intersection method
+      // const pakFood = new Set(["tomatao", "onion", "garlic", "patato", "bee"]);
+      // const inFood = new Set(["tomatao", "patato", "ginger", "onion", "olivi"]);
+      // const commonFood = pakFood.intersection(inFood);
+      // console.log("intersection:", commonFood);
+      // console.log([...commonFood]);
+
+      // // union method
+      // const mixFood = pakFood.union(inFood);
+      // console.log("union:", mixFood);
+
+      // console.log([...pakFood, ...inFood]);
+
+      // // differnece method
+      // const uniqueFood = pakFood.difference(inFood);
+      // const uniqueFoods = inFood.difference(pakFood);
+      // console.log(uniqueFoods);
+      // console.log(uniqueFood);
+
+      // // symmetric differnce
+      // const allFoods = pakFood.symmetricDifference(inFood);
+      // console.log(allFoods);
+
+      // // Map method
+      // const myMap = new Map();
+      // myMap.set("name", "zeeshan").set("location", "lahore").set("age", 19);
+      // console.log(myMap.get("name"));
+      // console.log(myMap.get("location"));
+      // console.log(myMap.get("age"));
+      // /// delete method map
+      // myMap.delete("age");
+      // console.log(myMap);
+      // //  use of has method
+      // console.log(myMap.has("name"));
+      // console.log(myMap.has("age"));
+      // // size method
+      // console.log(myMap.size);
+      // // clear method
+      // //myMap.clear();
+      // // console.log(myMap);
+      // // maps method include array
+      // myMap.set([20, "july", 2006]);
+
+      // console.log(myMap);
+
+      // paractice challenge
+
+      // const gameEvent = new Map([
+      //   [17, "Goal"],
+      //   [36, "Substitution"],
+      //   [47, "Goal"],
+      //   [61, "Substitution"],
+      //   [64, "Yellow Card"],
+      //   [69, "Red Card"],
+      //   [70, "Substitution"],
+      //   [72, "Substitution"],
+      //   [76, "Goal"],
+      //   [80, "Goal"],
+      //   [92, "Yellow Card"],
+      // ]);
+      // // unique events // remoe duplicate values:
+      // const event = [...new Set(gameEvent.values())];
+      // console.log(event);
+
+      // // delete event
+      // gameEvent.delete(64);
+      // // calculate average times
+      // const average = 90 / gameEvent.size;
+      // console.log(`An event happened on average every ${average} minutes`);
+      // //
+      // const time = [...gameEvent.keys()].pop();
+      // console.log(
+      //   `An event happened on average every ${time / gameEvent.size} minutes`
+      // );
+      // for (const [min, event] of gameEvent) {
+      //   const half = min <= 45 ? "first half" : "secound half";
+      //   console.log(`[${half}] ${min}:${event}`);
+      // }
+
+      // paractice string method & stirng
+      // find individual letter
+      // const name = "TAP Air Portugal";
+      // const plane = "A320 ";
+      // console.log(name[0]);
+      // console.log(name[1]);
+      // console.log(name[2]);
+      // // find length property
+      // console.log(name.length);
+      // // find position method
+      // console.log(name.indexOf("a"));
+      // console.log(name.indexOf("i"));
+      // // last index property
+      // console.log(name.lastIndexOf("p"));
+      // // slice method
+      // console.log(name.slice(4));
+      // console.log(name.slice(4, 7));
+      // console.log(name.slice(0, name.indexOf(" ")));
+      // console.log(name.slice(name.lastIndexOf(" ") + 1));
+      // //paractice for slice method
+      // const checkMiddleSeat = function (seat) {
+      //   const s = seat.slice(-1);
+      //   if (s === "B" || s === "A") {
+      //     console.log("You got the middle seat");
+      //   } else {
+      //     console.log("you got luck");
+      //   }
+      // };
+      // checkMiddleSeat("11B");
+      // checkMiddleSeat("23C");
+      // checkMiddleSeat("22A");
+      // console.log(new String("zeeshan"));
+      // console.log(typeof new String("zeeshan"));
+      // part 2 method of string
+      // const airLine = "TAP Air Pakistan";
+      // // method use lower case
+      // console.log(airLine.toLowerCase());
+      // // method use upper case
+      // console.log(airLine.toUpperCase());
+      // //paractice
+      // const passenger = "ZeEsHAn";
+      // const passengerLower = passenger.toLowerCase();
+      // const passengerCorrect =
+      //   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+      // console.log(passengerCorrect);
+      // // trim method
+      // const email = "zeeshan@gmail.com";
+      // const loginEmail = "   Zeeshan@gmail.com  \n";
+      // const normalEmail = loginEmail.toLowerCase().trim();
+      // console.log(normalEmail);
+      // console.log(email === loginEmail);
+      // // replace method
+      // const price = "288,97$";
+      // const priceUs = price.replace("$", "Rs").replace(",", ".");
+      // console.log(priceUs);
+      // // replace all method
+      // const announcement =
+      //   "All passengers come to boarding door 23. Boarding door 23!";
+      // const newAnnouncement = announcement.replaceAll("door", "gate");
+      // console.log(newAnnouncement);
+      // //global replace method
+      // const announcements =
+      //   "All passengers come to boarding door 23. Boarding door 23!";
+      // const fixed = announcements.replace(/door/g, "gate");
+      // console.log(fixed);
+      // // give answere booleans method & include
+      // const sentence = "JavaScript";
+      // console.log(sentence.includes("Java"));
+      // console.log(sentence.includes("phyton"));
+      // // start with method
+      // console.log(sentence.startsWith("Java"));
+      // console.log(sentence.startsWith("phyton"));
+      // // ends with method with practice:
+      // if (sentence.startsWith("Java") && sentence.endsWith("Script")) {
+      //   console.log("Awesome! True Value");
+      // } else {
+      //   console.log("oops! Wrong Value");
+      // }
+      // /// paractice
+      // const checkBag = function (item) {
+      //   const bag = item.toLowerCase();
+      //   if (bag.includes("knife") || bag.includes("gun")) {
+      //     console.log("Not Allowed in Bus");
+      //   } else {
+      //     console.log("Welcome to Bus");
+      //   }
+      // };
+      // checkBag("I have a laptop and some food and pocket Knife");
+      // checkBag("Snacks and camera");
+      // checkBag("gun for protection");
+      // string part 3
+      // use split method
+      // console.log("a+very+nice+string".split("+"));
+      // console.log("Zeeshan Abid".split(" "));
+      // // join method
+      // const Name = ([firstName, lastName] = "Zeeshan Abid".split(" "));
+      // const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+      // console.log(newName);
+      // // paractice question
+      // const capitalName = function (name) {
+      //   const naame = name.split(" ");
+      //   const naameUpper = [];
+      //   for (const n of naame) {
+      //     // naameUpper.push(n[0].toUpperCase() + n.slice(1));
+      //     naameUpper.push(n.replace(n[0], n[0].toUpperCase()));
+      //   }
+      //   console.log(naameUpper.join(" "));
+      // };
+      // capitalName("hello zeeshan abid");
+      // capitalName("i am paractice in javascript.");
+      // // pad start method
+      // const message = "Hello Zeeshan Abid.";
+      // console.log(message.padStart(25, "*"));
+      // // pad end method
+      // console.log(message.padEnd(25, "+"));
+      // // paractice question
+      // const maskCredit = function (number) {
+      //   const str = number + "";
+      //   const last = str.slice(-4);
+      //   return last.padStart(str.length, "*");
+      // };
+      // console.log(maskCredit(4567890123));
+      // // repeat method
+      // const message2 = "Hey! Zeeshan Abid....How are you?...";
+      // console.log(message2.repeat(5));
+      // // paractice repeat method
+      // const planeLines = function (n) {
+      //   console.log(`There are ${n} plane in line${" ✈".repeat(n)}`);
+      // };
+      // planeLines(2);
+      // planeLines(5);
+      // planeLines(7);
+
+      // // paractice
+      // const textarea = document.querySelector("#input");
+      // const btn = document.querySelector("#btn");
+
+      // console.log(btn); // test karne ke liye
+      // btn.addEventListener("click", function () {
+      //   const text = textarea.value;
+
+      //   const rows = text.split("\n");
+      //   console.log(rows);
+      //   for (const [i, row] of rows.entries()) {
+      //     const [first, second] = row.toLowerCase().trim().split("_");
+      //     console.log(row, first, second);
+      //     const outPut = `${first}${second.replace(
+      //       [0],
+      //       second[0].toUpperCase()
+      //     )}`;
+      //     console.log(`${outPut.padEnd(20)}${"✅".repeat(i + 1)}`);
+      //   }
+      // });
+
+      // // paractice string all method
+      // const flights =
+      //   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+
+      // const getCode = (str) => str.slice(0, 3).toUpperCase();
+      // for (const flight of flights.split("+")) {
+      //   const [type, from, to, time] = flight.split(";");
+      //   const outPut = ` ${
+      //     type.startsWith("_Delayed") ? "🔴" : " "
+      //   }${type.replaceAll("_", " ")} ${getCode(from)} ${getCode(
+      //     to
+      //   )} (${time.replace(":", "h")})`.padStart(40);
+      //   console.log(outPut);
+      // }
+    </script>
+  </body>
+</html>
+
+
+
+<script>
+  //A closer lock at function
+  // default parameters
+
+  // "use strict";
+  // const bookings = [];
+  // const createBookings = function (
+  //   flightNum,
+  //   numPassengers = 1,
+  //   price = 456 * numPassengers
+  // ) {
+  //   // // ES5 method
+  //   // numPassengers = numPassengers || 1;
+  //   // price = price || 456;
+  //   const booking = {
+  //     flightNum,
+  //     numPassengers,
+  //     price,
+  //   };
+  //   console.log(booking);
+  //   bookings.push(booking);
+  // };
+  // createBookings("LH125");
+  // createBookings("LH125", 2, 800);
+  // createBookings("LH125", 3);
+  // createBookings("LH125", 4);
+
+  // how pass arguments works
+  // values vs. reference....
+
+  // const flight = "LH123";
+  // const values = {
+  //   name: "Zeeshan Abid",
+  //   passport: 234567890,
+  // };
+
+  // const checkIn = function (flightNum, passenger) {
+  //   flightNum = "LH125";
+  //   passenger.name = "Mr." + passenger.name;
+
+  //   if (passenger.passport === 234567890) {
+  //     alert("Checked In");
+  //   } else {
+  //     alert("Wrong Paasport!..");
+  //   }
+  // };
+
+  // checkIn(flight, values);
+  // console.log(flight);
+  // console.log(values);
+
+  // //
+  // const flightNum = flight;
+  // const passenger = values;
+  // const newPassport = function (person) {
+  //   person.passport = Math.trunc(Math.random() * 10000000);
+  // };
+  // newPassport(values);
+  // checkIn(flight, values);
+
+  //function accepting
+  // callback function
+
+  // const onWard = function (str) {
+  //   return str.replace(/ /g, " ").toLowerCase();
+  // };
+  // const uperFirstWord = function (str) {
+  //   const [first, ...others] = str.split("");
+  //   return [first.toUpperCase(), ...others].join("");
+  // };
+  // const trnasformer = function (str, fn) {
+  //   console.log(`Original string:${str}`);
+  //   console.log(`Transformed string:${fn(str)}`);
+
+  //   console.log(`transformed by:${fn.name}`);
+  // };
+  // trnasformer("javascript is the best!", uperFirstWord);
+  // cAll body function
+  // const high5 = function () {
+  //   console.log("👏");
+  // };
+  // document.body.addEventListener("click", high5);

@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.app-container{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+  text-align: center;
+margin-bottom: 20px;
+}
+.search-form{
+  display: flex;
+  margin-bottom: 20px;
+}
+.search-form input{
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+.search-form button{
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-form button:hover{
+  background-color: #0056b3;
+}
+
+.results{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(150px , 1frs));
+gap: 15px;
+}
+.results .movie-card{
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.results img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.message{
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}

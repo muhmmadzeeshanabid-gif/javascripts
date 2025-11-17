@@ -1,0 +1,28 @@
+/* Body style */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #87CEEB; /* Sky blue background */
+}
+
+/* Canvas style */
+#board {
+    display: block;
+    margin: 0 auto;
+    background-image: url(picture/flappybirdbg.png); /* Background image */
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
